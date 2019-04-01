@@ -11,14 +11,14 @@ const questionnairePage = new QuestionnairePage();
 const productPage = new ProductPage();
 const paymentPage = new PaymentPage();
 const onlineVisitUrl = 'https://start.ro.co/rory/vaginal-dryness/online-visit/';
-const birthdate = '07/04/1960';
+const birthdate = '03/01/1979';
 const zipcode = '11213';
 
 describe('Complete visit with no additional conditions', () => {
     it('Should send the customer to the next page after she fills all the required fields', () => {
         browser.url('');
         startVisitPage.preLoader.isDisplayed(false);
-        browser.pause(timeouts.medium);
+        browser.pause(timeouts.long);
         
         startVisitPage.fillEmailAddressField();
         startVisitPage.fillFirstNameField();
@@ -29,7 +29,7 @@ describe('Complete visit with no additional conditions', () => {
         
         browser.waitUntil(() => {
             return browser.getUrl() === onlineVisitUrl + 10;
-        }, timeouts.long);
+        }, 10000);
         
         expect(browser.getUrl()).to.equal(onlineVisitUrl + 10)
     });
@@ -66,7 +66,7 @@ describe('Complete visit with no additional conditions', () => {
 
         browser.waitUntil(() => {
             return browser.getUrl() === onlineVisitUrl + 6050;
-        }, timeouts.long);
+        }, timeouts.extra_long);
 
         expect(browser.getUrl()).to.equal(onlineVisitUrl + 6050)
     });

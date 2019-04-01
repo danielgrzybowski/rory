@@ -39,7 +39,7 @@ export class QuestionnairePage {
     }
 
     pickFemaleOption() {
-        this.femaleOption.waitForDisplayed(timeouts.long);
+        this.femaleOption.waitForDisplayed(timeouts.extra_long);
         return this.femaleOption.click();
     }
     

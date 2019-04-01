@@ -15,7 +15,7 @@ export class ProductPage {
     } 
 
     getProductName() {
-        this.productName.waitForDisplayed(timeouts.long);
+        this.productName.waitForDisplayed(timeouts.extra_long);
         return this.productName.getText();
     }
 
