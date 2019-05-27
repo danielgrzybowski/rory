@@ -3,7 +3,7 @@ import timeouts from '../constants/timeouts.js'
 export class ProductPage {
 
     get productName() {
-        return $('.informative-product-item-title');
+        return $('.start-title');
     }
 
     get price() {
